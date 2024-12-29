@@ -1,4 +1,4 @@
-
+import os 
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -10,7 +10,7 @@ from typing import List
 from typing import Iterable
 
 # Create array sizes to test
-array_sizes: Iterable[int] = range(500, 5001, 500)
+array_sizes: Iterable[int] = range(500, 10_001, 500)
 
 # Lists to store execution times
 bubble_times: List[float] = []
@@ -26,13 +26,17 @@ for size in array_sizes:
     selection: SelectionSort = SelectionSort(array) 
     
     # Get execution times using benchmark method
-    # merge_time: float = merge_sorter.benchmark(size)
     bubble_time: float = bubble.benchmark()['execution_time']
     selection_time: float = selection.benchmark()['execution_time']
     
     # Store the times
     bubble_times.append(bubble_time)
     selection_times.append(selection_time)
+
+FIG_DIR: str = "figures"
+# Creating directory for saving images
+if not os.path.exists(FIG_DIR):
+    os.makedirs(FIG_DIR, exist_ok=True)
 
 # Create the plot
 plt.figure(figsize=(10, 6))
@@ -45,6 +49,6 @@ plt.xlabel('Array Size')
 plt.ylabel('Execution Time (seconds)')
 plt.grid(True)
 plt.legend()
-
+plt.savefig(os.path.join(FIG_DIR, 'benchmark_500_10000.png'))
 # Display the plot
 plt.show()
