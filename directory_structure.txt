@@ -1,0 +1,25 @@
+.
+├── benchmark.py
+├── blog
+│   ├── sorting.py
+│   └── utils.py
+├── directory_structure.txt
+├── dummy
+│   └── sorting_basic_3.py
+├── environment.yml
+├── main.py
+├── notebooks
+│   └── sorting.ipynb
+├── requirements.txt
+├── src
+│   ├── __init__.py
+│   ├── algorithms
+│   │   ├── __init__.py
+│   │   ├── bubble.py
+│   │   ├── selection.py
+│   │   └── sort.py
+│   └── utils.py
+├── structure.txt
+└── tests.py
+
+6 directories, 17 files
