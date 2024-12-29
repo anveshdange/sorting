@@ -33,6 +33,14 @@ for size in array_sizes:
     bubble_times.append(bubble_time)
     selection_times.append(selection_time)
 
+    # deleting all the objects for memory management
+    del array
+    del bubble
+    del selection
+    del bubble_time
+    del selection_time
+
+
 FIG_DIR: str = "figures"
 # Creating directory for saving images
 if not os.path.exists(FIG_DIR):
