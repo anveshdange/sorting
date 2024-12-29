@@ -7,6 +7,10 @@
 ├── dummy
 │   └── sorting_basic_3.py
 ├── environment.yml
+├── figures
+│   ├── benchmark_500_10000.png
+│   ├── benchmark_500_5000(2).png
+│   └── benchmark_500_5000.png
 ├── main.py
 ├── notebooks
 │   └── sorting.ipynb
@@ -19,7 +23,6 @@
 │   │   ├── selection.py
 │   │   └── sort.py
 │   └── utils.py
-├── structure.txt
 └── tests.py
 
-6 directories, 17 files
+7 directories, 19 files
